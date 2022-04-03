@@ -1,0 +1,13 @@
+.section {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: rgba(177, 187, 168, 0.322);
+  width: 600px;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.statistics > span {
+  font-size: 16px;
+  font-weight: 700;
+}
