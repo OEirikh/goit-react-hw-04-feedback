@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 import s from "./FeedbackOptions.module.css";
-export default function FeedbackOptions({ options, onLeaveFeeedback }) {
+export default function FeedbackOptions({ options, updateQuantityFeedbeacks }) {
   return (
     <div>
       <ul className={s.list}>
@@ -10,7 +10,7 @@ export default function FeedbackOptions({ options, onLeaveFeeedback }) {
             <button
               className={s.button}
               type="button"
-              onClick={onLeaveFeeedback}
+              onClick={updateQuantityFeedbeacks}
               id={key}
             >
               {key}
@@ -24,9 +24,9 @@ export default function FeedbackOptions({ options, onLeaveFeeedback }) {
 
 FeedbackOptions.propTypes = {
   options: PropTypes.shape({
-    good: PropTypes.string.isRequired,
-    neutral: PropTypes.string.isRequired,
-    bad: PropTypes.string.isRequired,
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
   }),
-  onLeaveFeeedback: PropTypes.func.isRequired,
+  updateQuantityFeedbeacks: PropTypes.func.isRequired,
 };
