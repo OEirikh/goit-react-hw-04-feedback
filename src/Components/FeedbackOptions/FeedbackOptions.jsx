@@ -5,7 +5,7 @@ export default function FeedbackOptions({ options, updateQuantityFeedbeacks }) {
   return (
     <div>
       <ul className={s.list}>
-        {Object.keys(options).map((key) => (
+        {options.map((key) => (
           <li key={key} className={s.item}>
             <button
               className={s.button}
@@ -23,10 +23,6 @@ export default function FeedbackOptions({ options, updateQuantityFeedbeacks }) {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }),
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   updateQuantityFeedbeacks: PropTypes.func.isRequired,
 };
